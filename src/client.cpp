@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "quadratic.h"
+#include "../include/quadratic.h"
 
 const char *INITIAL_MSG = "[QUADRATIC EQUATION SOLVER]\n"
                           "ax^2 + bx + c = 0\n"
@@ -20,9 +20,8 @@ int client_square_eq() {
     while (n_valid != 3 || params.a == 0.0) {
         printf("%s", INPUT_MSG);
         n_valid = scanf("%lf%lf%lf", &params.a, &params.b, &params.c);
-        scanf ("%*[^\n]");
+        scanf("%*[^\n]");
     }
-
 
     size_t n_roots = solve(params, &solutions);
 
@@ -30,18 +29,17 @@ int client_square_eq() {
 
     switch (n_roots) {
         case 0:
-            printf("%s", "No solutions");
+            printf("No solutions\n");
             break;
         case 1:
-            printf("x1 = %lf\n", solutions.x1);
+            printf("x1 = %.6lf\n", solutions.x1);
             break;
         case 2:
-            printf("x1 = %lf\n"
-                   "x2 = %lf\n", solutions.x1, solutions.x2);
+            printf("x1 = %.6lf\n"
+                   "x2 = %.6lf\n", solutions.x1, solutions.x2);
             break;
         default:
-            printf("%s", "Something went wrong...");
-            break;
+            printf("Something went wrong...\n");
     }
 
     return 0;

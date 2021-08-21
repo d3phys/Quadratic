@@ -1,7 +1,10 @@
 #include <math.h>
-#include "quadratic.h"
+#include <assert.h>
+#include "../include/quadratic.h"
 
 int solve(square_params coeffs, square_solutions *solutions) {
+    assert(solutions);
+
     double discriminant = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
 
     if (discriminant == 0) {
