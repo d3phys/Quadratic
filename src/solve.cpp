@@ -2,15 +2,35 @@
 #include <assert.h>
 #include "../include/quadratic.h"
 
-int solve(square_params coeffs, square_solutions *solutions) {
+double calc_discr(square_params coeffs) {
+    return coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
+}
+
+int solve_linear(double b, double c, double *solution) {
+    assert(solution);
+
+    if (equal(b, 0)) {
+        if (equal(c, 0))
+            return -1;
+        else 
+            return 0;
+    } else {
+        *solution = (-c) / b;
+        return 1;
+    }
+}
+
+int solve_quadratic(square_params coeffs, square_solutions *solutions) {
     assert(solutions);
 
-    double discriminant = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
+    double discriminant = calc_discr(coeffs);
 
-    if (discriminant == 0) {
+    if (equal(coeffs.a, 0)) {
+        return solve_linear(coeffs.b, coeffs.c, &(solutions->x1));
+    } else if (equal(discriminant, 0)) {
         solutions->x1 = (-coeffs.b) / (2.0 * coeffs.a);
         return 1;
-    } else if (discriminant > 0) {
+    } else if (over(discriminant, 0)) {
         double sqrt_discr = sqrt(discriminant);
         solutions->x1 = (-coeffs.b + sqrt_discr) / (2.0 * coeffs.a);
         solutions->x2 = (-coeffs.b - sqrt_discr) / (2.0 * coeffs.a);
