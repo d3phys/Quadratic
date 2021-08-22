@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include "../include/quadratic.h"
 
-const char *FINAL_MSG = "Solutions for the equation:\n\n";
-
 void display_roots(int n_roots, square_solutions solutions) {
-    printf("%s", FINAL_MSG);
     switch (n_roots) {
         case 0:
             printf("No real roots.\n");

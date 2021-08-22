@@ -3,8 +3,6 @@
 
 const double TOLERANCE = 1e-6;
 
-const int BUFFER_SIZE = 30;
-
 struct square_params {
     double a;
     double b;
@@ -15,7 +13,6 @@ struct square_solutions {
     double x1;
     double x2;
 };
-
 
 int client_square_eq();
 
