@@ -1,3 +1,7 @@
+/*!
+ * \file
+ * \brief ANSI color codes.
+ */
 #ifndef COLORS_H_
 #define COLORS_H_
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../include/quadratic.h"
 
+/// [display_roots]
 void display_roots(int n_roots, square_solutions solutions) {
     switch (n_roots) {
         case 0:
@@ -20,3 +21,4 @@ void display_roots(int n_roots, square_solutions solutions) {
             printf("Something went wrong...\n");
     }
 }
+/// [display_roots]
