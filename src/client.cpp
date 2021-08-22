@@ -26,6 +26,15 @@ const char *INVITE_LINE = ANSI_COLOR_YELLOW "[quadratic]# " ANSI_COLOR_RESET;
 
 const size_t INPUT_BUFFER = 30;
 
+/*!
+ * \brief Short description.
+ * Short
+ *             
+ *
+ * Long description.
+ *                            
+ *                              
+ *                              */
 int client_square_eq() {
     square_params    params    = {0};
     square_solutions solutions = {0};
