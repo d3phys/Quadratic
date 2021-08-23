@@ -1,3 +1,7 @@
+/*!
+ * \file
+ * \brief Equation solver include file.
+*/
 #ifndef SOLVE_H_
 #define SOLVE_H_
 

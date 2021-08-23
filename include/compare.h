@@ -1,9 +1,12 @@
+/*!
+ * \file
+ * \brief Tolerant computations include file.
+*/
 #ifndef COMPARE_H_
 #define COMPARE_H_
 #include <math.h>
 
-const int TOLERANCE_POWER = 6;
-const double TOLERANCE = pow(10.0, -TOLERANCE_POWER);
+const double TOLERANCE = 1e-6;
 
 /*!
  * \brief Checks equality with tolerance.

@@ -1,6 +1,11 @@
+/*!
+ * \file
+ * \brief Application client include file.
+*/
 #ifndef _CLIENT_H_
 #define _CLIENT_H_
 #include <cstddef>
+#include <math.h>
 #include "solve.h"
 
 const char INITIAL_MSG[] = "╔═══╦╗─╔╦═══╦═══╦═══╦═══╦════╦══╦═══╗\n"
@@ -16,11 +21,14 @@ const char INCORRECT_MSG[] = "Incorrect input. Try again. Run 'h' for help.\n";
 
 const char OVERFLOW_MSG[] = "Buffer overflow. Try again. Run 'h' for help.\n";
 
-const char HELP_MSG[] = "----------------------------------------------------\n"
+const char HELP_MSG[] = "------------------------------------------------------\n"
                         "'h' or 'help'           - print this message.\n"
                         "'q' or 'quit'           - exit.\n"
                         "Enter 3 numbers (a b c) - solve ax²+bx+c=0 equation.\n"
-                        "----------------------------------------------------\n";
+                        "------------------------------------------------------\n"
+                        "Buffer overflow error   - input length too long (>28).\n"
+                        "Incorrect input error   - incorrect input.\n"
+                        "------------------------------------------------------\n";
 
 const char INVITE_LINE[] = "[quadratic]> ";
 
@@ -44,9 +52,8 @@ int client_square_eq();
 /*!
  * \brief Displays solutions.
  *
- * Code is below.
- *
- * \snippet output.cpp display_roots
+ * \warning It is a specific function for client application. 
+ * Do not use it!
 */
 void display_roots(const int n_roots, const square_solutions solutions);
 
