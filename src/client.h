@@ -24,7 +24,7 @@ int client_square_eq();
  * \warning It is a specific function for client application. 
  * Do not use it!
 */
-void display_roots(const int n_roots, const square_solutions solutions);
+void display_roots(const roots_state rs, const square_solutions solutions);
 
 
 #endif // _CLIENT_H_

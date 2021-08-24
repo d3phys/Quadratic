@@ -4,18 +4,27 @@
 #include "../include/io.h"
 #include "config.h"
 
+#define CHECK_CMD(str1, str2)                    \
+    strncmp(str1, str2, INPUT_BUFFER_SIZE) == 0  \
+
+#define COLOR_PRINT(msg, color) \
+    set_text_color(color);      \
+    printf("%s", msg);          \
+    reset_color();
+
 const char INITIAL_MSG[] = "╔═══╦╗─╔╦═══╦═══╦═══╦═══╦════╦══╦═══╗\n"
                            "║╔═╗║║─║║╔═╗╠╗╔╗║╔═╗║╔═╗║╔╗╔╗╠╣╠╣╔═╗║\n"
                            "║║─║║║─║║║─║║║║║║╚═╝║║─║╠╝║║╚╝║║║║─╚╝\n"
                            "║║─║║║─║║╚═╝║║║║║╔╗╔╣╚═╝║─║║──║║║║─╔╗\n"
                            "║╚═╝║╚═╝║╔═╗╠╝╚╝║║║╚╣╔═╗║─║║─╔╣╠╣╚═╝║\n"
                            "╚══╗╠═══╩╝─╚╩═══╩╝╚═╩╝─╚╝─╚╝─╚══╩═══╝\n"
-                           "───╚╝A minimalistic equations solver\n"
-                           "                           by d3phys\n";
+                           "───╚╝A minimalistic equations solver \n"
+                           "                           by d3phys \n"
+                           "Enter 3 numbers (a b c):             \n";
 
 const char INCORRECT_MSG[] = "Incorrect input. Try again. Run 'h' for help.\n";
 
-const char OVERFLOW_MSG[] = "Buffer overflow. Try again. Run 'h' for help.\n";
+const char OVERFLOW_MSG[]  = "Buffer overflow. Try again. Run 'h' for help.\n";
 
 const char HELP_MSG[] = "------------------------------------------------------\n"
                         "'h' or 'help'           - print this message.\n"
@@ -32,42 +41,32 @@ int client_square_eq() {
     square_params    params    = {0};
     square_solutions solutions = {0};
 
-    char input[INPUT_BUFFER] = {0};
-    int  n_input = 0;
+    char input[INPUT_BUFFER_SIZE] = {0};
+    int  n_chars_read = 0;
 
-    set_text_color(YELLOW);
-    printf("%s", INITIAL_MSG);
-    reset_color();
+    COLOR_PRINT(INITIAL_MSG, YELLOW);
 
     size_t n_valid = 0;
 
     while (true) {
-        set_text_color(YELLOW);
-        printf("%s", INVITE_LINE);
-        reset_color();
+        COLOR_PRINT(INVITE_LINE, YELLOW);
         
-        n_input = getl(input, INPUT_BUFFER, stdin);
+        n_chars_read = getl(input, INPUT_BUFFER_SIZE, stdin);
 
-        if (n_input < 0) {
-            set_text_color(RED);
-            printf("%s", OVERFLOW_MSG);
-            reset_color();
+        if (n_chars_read < 0) {
+            COLOR_PRINT(OVERFLOW_MSG, RED);
         } else {
             n_valid = sscanf(input, "%lf%lf%lf", &params.a, &params.b, &params.c);
 
-            if(!strcmp(input, "q") || !strcmp(input, "quit")) {
+            if (CHECK_CMD(input, "q") || CHECK_CMD(input, "quit")) {
                 return 0;
-            } else if (!strcmp(input, "h") || !strcmp(input, "help")) {
-                set_text_color(BLUE);
-                printf("%s", HELP_MSG);
-                reset_color();
+            } else if (CHECK_CMD(input, "h") || CHECK_CMD(input, "help")) {
+                COLOR_PRINT(HELP_MSG, BLUE);
             } else if (n_valid == 3) {
-                int n_roots = solve_quadratic(params, &solutions);
-                display_roots(n_roots, solutions);
+                roots_state rs = solve_quadratic(params, &solutions);
+                display_roots(rs, solutions);
             } else {
-                set_text_color(RED);
-                printf("%s", INCORRECT_MSG);
-                reset_color();
+                COLOR_PRINT(INCORRECT_MSG, RED);
             }
         }
     }

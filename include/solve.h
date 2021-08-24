@@ -33,6 +33,17 @@ struct square_solutions {
 };
 
 /*!
+ * \brief Quadratic roots state 
+ */ 
+enum roots_state {
+    ONE_RT  =  1, /// One root
+    TWO_RT  =  2, /// Two roots
+    ZERO_RT =  0, /// Zero roots
+    INF_RT  = -1, /// Infinity roots
+    ERR_INF = -2, /// At least one of the roots is infinite 
+};
+
+/*!
  * \brief Solves quadratic equation.
  *
  * \f$ax^2+bx+c=0\f$
@@ -50,7 +61,7 @@ struct square_solutions {
  * - if \f$a=b=c=0\f$ it returns -1
  * - if \f$a=b=0\f$ and \f$c!=0\f$ it returns 0
 */
-int solve_quadratic(const square_params coeffs, square_solutions *solutions);
+roots_state solve_quadratic(const square_params coeffs, square_solutions *solutions);
 
 /*!
  * \brief Solves linear equation.
@@ -71,7 +82,7 @@ int solve_quadratic(const square_params coeffs, square_solutions *solutions);
  * - if \f$b=c=0\f$ it returns -1
  * - if \f$b=0\f$ and \f$c!=0\f$ it returns 0
 */
-int solve_linear(const double b, const double c, double *solution);
+roots_state solve_linear(const double b, const double c, double *solution);
 
 /*!
  * \brief Calculates the discriminant.

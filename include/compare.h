@@ -10,7 +10,7 @@
 /*!
  * \brief Error
 */
-const double TOLERANCE = 1e-6;
+const double TOLERANCE = 1e-12;
 
 /*!
  * \brief Checks equality with tolerance.
