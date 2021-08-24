@@ -28,6 +28,8 @@ const char HELP_MSG[] = "------------------------------------------------------\
 
 const char INVITE_LINE[] = "[quadratic]> ";
 
+
+
 int client_square_eq() {
     square_params    params    = {0};
     square_solutions solutions = {0};

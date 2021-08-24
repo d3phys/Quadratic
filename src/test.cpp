@@ -2,7 +2,6 @@
 #include "../include/solve.h"
 #include "../include/compare.h"
 #include "../include/test.h"
-#include <string.h>
 
 const char SUCCESS[] = "\u001b[32m✔\u001b[0m";
 const char FAILURE[] = "\u001b[31m✘\u001b[0m";
