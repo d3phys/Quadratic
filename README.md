@@ -11,7 +11,7 @@ A minimalistic CLI Linux program which solves quadratic equations.
 * [Usage](#usage)
 
 ## Description
-This program can easily solve quadratic equations. It has an **eye-catching design** and **fluent user-friendly interface**.
+This program can easily solve quadratic equations. It has an **eye-catching design** and **user-friendly interface**.
 
 ## Installation
 This program can be installed in a few simple steps. You should have `git` , `make` and `g++ compiler` installed.

@@ -26,7 +26,7 @@ int set_color(colors text, colors background) {
 
 int getl(char *buffer, const size_t size, FILE *stream) {
     assert(buffer);
-    assert(stream);
+    assert(ferror(stream) == 0);
 
     char c = 0;
     int  i = 0;
