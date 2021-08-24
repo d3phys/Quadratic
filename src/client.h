@@ -6,8 +6,8 @@
 */
 #ifndef _CLIENT_H_
 #define _CLIENT_H_
-#include <cstddef>
-#include "solve.h"
+
+#include "../include/solve.h"
 
 /*!
  * \brief Main quadratic application client procedure.

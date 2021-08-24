@@ -6,8 +6,10 @@
 */
 #ifndef COMPARE_H_
 #define COMPARE_H_
-#include <math.h>
 
+/*!
+ * \brief Error
+*/
 const double TOLERANCE = 1e-6;
 
 /*!

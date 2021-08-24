@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include "../include/client.h"
+#include "client.h"
 #include "../include/io.h"
-#include "../include/config.h"
+#include "config.h"
 
 const char INITIAL_MSG[] = "╔═══╦╗─╔╦═══╦═══╦═══╦═══╦════╦══╦═══╗\n"
                            "║╔═╗║║─║║╔═╗╠╗╔╗║╔═╗║╔═╗║╔╗╔╗╠╣╠╣╔═╗║\n"
@@ -35,39 +35,39 @@ int client_square_eq() {
     char input[INPUT_BUFFER] = {0};
     int  n_input = 0;
 
-    set_color(YELLOW);
+    set_text_color(YELLOW);
     printf("%s", INITIAL_MSG);
-    set_color(RESET);
+    reset_color();
 
     size_t n_valid = 0;
 
     while (true) {
-        set_color(YELLOW);
+        set_text_color(YELLOW);
         printf("%s", INVITE_LINE);
-        set_color(RESET);
+        reset_color();
         
         n_input = getl(input, INPUT_BUFFER, stdin);
 
         if (n_input < 0) {
-            set_color(RED);
+            set_text_color(RED);
             printf("%s", OVERFLOW_MSG);
-            set_color(RESET);
+            reset_color();
         } else {
             n_valid = sscanf(input, "%lf%lf%lf", &params.a, &params.b, &params.c);
 
             if(!strcmp(input, "q") || !strcmp(input, "quit")) {
                 return 0;
             } else if (!strcmp(input, "h") || !strcmp(input, "help")) {
-                set_color(BLUE);
+                set_text_color(BLUE);
                 printf("%s", HELP_MSG);
-                set_color(RESET);
+                reset_color();
             } else if (n_valid == 3) {
                 int n_roots = solve_quadratic(params, &solutions);
                 display_roots(n_roots, solutions);
             } else {
-                set_color(RED);
+                set_text_color(RED);
                 printf("%s", INCORRECT_MSG);
-                set_color(RESET);
+                reset_color();
             }
         }
     }

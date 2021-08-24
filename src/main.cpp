@@ -1,4 +1,4 @@
-#include "../include/client.h"
+#include "client.h"
 #include "../include/test.h"
 
 #define UNIT_TEST

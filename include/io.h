@@ -6,46 +6,56 @@
 */
 #ifndef IO_H_
 #define IO_H_
+
 #include <stdio.h>
 
 
 /*!
  * \brief ASCII colors enum
 */
-enum colors {
-    NOTHING = 0,
-    RESET,
-    RED,
+enum color {
+    RED = 1,
     GREEN,
     YELLOW,
     BLUE,
+    MAGENTA,
+    CYAN,
+    WHITE,
 };
 
 /*!
- * \brief Sets console color
+ * \brief Sets console text color
  *
- * Function sets ASCII text and background console color
+ * Function sets ASCII text console color
  *
- * \param  text       Text color
+ * \param  text Text color
+ *
+ * \return 
+ * The same as printf() function
+*/
+int set_text_color(color text);
+
+/*!
+ * \brief Sets console background color
+ *
+ * Function sets ASCII background console color
+ *
  * \param  background Background color
  *
  * \return 
- * - Error:   negative value.
- * - Success: positive value.
- *
- * \bug 
- * ASCII reset symbol is the same for text and background. 
- * - If you use set_color(RESET) both text and background will reset.
- * - Try to use set_color(NOTHING, RED) if you don't want to change text color. 
- *
- * \code
- *
- * set_color(RED);           // RED console text color
- * set_color(YELLOW, RESET); // Default console text and background color
- *
- * \endcode
+ * Negative value in case of error 
 */
-int set_color(colors text = NOTHING, colors background = NOTHING);
+int set_back_color(color background);
+
+/*!
+ * \brief Resets console color settings
+ *
+ * \warning Function resets both background and text color settings
+ *
+ * \return 
+ * Negative value in case of error 
+*/
+int reset_color(); 
 
 /*!
  * \brief Gets a string from a stream.
@@ -69,7 +79,7 @@ int set_color(colors text = NOTHING, colors background = NOTHING);
  * if (getl(buffer, 10, stdin) == -1)
  *      printf("Error!!!");
  *
- * if (strcmp(buffer, "hello"))
+ * if (strcmp(buffer, "hello") == 0)
  *      printf("Hello my dear friend!");
  *
  * \endcode

@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "Quadratic", "index.html", [
-    [ "Bug List", "bug.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ]

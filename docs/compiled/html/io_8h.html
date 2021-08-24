@@ -107,24 +107,31 @@ $(document).ready(function(){initNavTree('io_8h.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aedd64c3f92da850b93776c65fd1cced3"><td class="memItemLeft" align="right" valign="top"><a id="aedd64c3f92da850b93776c65fd1cced3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#aedd64c3f92da850b93776c65fd1cced3">colors</a> { <br />
-&#160;&#160;<b>NOTHING</b> = 0
-, <b>RESET</b>
-, <b>RED</b>
+<tr class="memitem:a37dbdc30935031c05304482e1be89d8f"><td class="memItemLeft" align="right" valign="top"><a id="a37dbdc30935031c05304482e1be89d8f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a> { <br />
+&#160;&#160;<b>RED</b> = 1
 , <b>GREEN</b>
-, <br />
-&#160;&#160;<b>YELLOW</b>
+, <b>YELLOW</b>
 , <b>BLUE</b>
+, <br />
+&#160;&#160;<b>MAGENTA</b>
+, <b>CYAN</b>
+, <b>WHITE</b>
 <br />
  }</td></tr>
-<tr class="memdesc:aedd64c3f92da850b93776c65fd1cced3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASCII colors enum. <br /></td></tr>
-<tr class="separator:aedd64c3f92da850b93776c65fd1cced3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a37dbdc30935031c05304482e1be89d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASCII colors enum. <br /></td></tr>
+<tr class="separator:a37dbdc30935031c05304482e1be89d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3fdf43f13ad2edb09038cb10a51bce41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a3fdf43f13ad2edb09038cb10a51bce41">set_color</a> (<a class="el" href="io_8h.html#aedd64c3f92da850b93776c65fd1cced3">colors</a> text=NOTHING, <a class="el" href="io_8h.html#aedd64c3f92da850b93776c65fd1cced3">colors</a> background=NOTHING)</td></tr>
-<tr class="memdesc:a3fdf43f13ad2edb09038cb10a51bce41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets console color.  <a href="io_8h.html#a3fdf43f13ad2edb09038cb10a51bce41">More...</a><br /></td></tr>
-<tr class="separator:a3fdf43f13ad2edb09038cb10a51bce41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401a773570b78f146a24a812b7e0e195"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a401a773570b78f146a24a812b7e0e195">set_text_color</a> (<a class="el" href="io_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a> text)</td></tr>
+<tr class="memdesc:a401a773570b78f146a24a812b7e0e195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets console text color.  <a href="io_8h.html#a401a773570b78f146a24a812b7e0e195">More...</a><br /></td></tr>
+<tr class="separator:a401a773570b78f146a24a812b7e0e195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3611f17d3e0e690f4b5171e23bda3cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#ac3611f17d3e0e690f4b5171e23bda3cd">set_back_color</a> (<a class="el" href="io_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a> background)</td></tr>
+<tr class="memdesc:ac3611f17d3e0e690f4b5171e23bda3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets console background color.  <a href="io_8h.html#ac3611f17d3e0e690f4b5171e23bda3cd">More...</a><br /></td></tr>
+<tr class="separator:ac3611f17d3e0e690f4b5171e23bda3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbfad95aeb169e9e37a4c2d751e441e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#acbfad95aeb169e9e37a4c2d751e441e9">reset_color</a> ()</td></tr>
+<tr class="memdesc:acbfad95aeb169e9e37a4c2d751e441e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets console color settings.  <a href="io_8h.html#acbfad95aeb169e9e37a4c2d751e441e9">More...</a><br /></td></tr>
+<tr class="separator:acbfad95aeb169e9e37a4c2d751e441e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a418ebcf0b10234bd23d4046eb627e3b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a418ebcf0b10234bd23d4046eb627e3b1">getl</a> (char *buffer, const size_t size, FILE *stream)</td></tr>
 <tr class="memdesc:a418ebcf0b10234bd23d4046eb627e3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a string from a stream.  <a href="io_8h.html#a418ebcf0b10234bd23d4046eb627e3b1">More...</a><br /></td></tr>
 <tr class="separator:a418ebcf0b10234bd23d4046eb627e3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,61 +192,87 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="io_8h.html#a418ebcf0b10234bd23d4046eb627e3b1">getl</a>(buffer, 10, stdin) == -1)</div>
 <div class="line">     printf(<span class="stringliteral">&quot;Error!!!&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (strcmp(buffer, <span class="stringliteral">&quot;hello&quot;</span>))</div>
+<div class="line"><span class="keywordflow">if</span> (strcmp(buffer, <span class="stringliteral">&quot;hello&quot;</span>) == 0)</div>
 <div class="line">     printf(<span class="stringliteral">&quot;Hello my dear friend!&quot;</span>);</div>
-<div class="ttc" id="aio_8h_html_a418ebcf0b10234bd23d4046eb627e3b1"><div class="ttname"><a href="io_8h.html#a418ebcf0b10234bd23d4046eb627e3b1">getl</a></div><div class="ttdeci">int getl(char *buffer, const size_t size, FILE *stream)</div><div class="ttdoc">Gets a string from a stream.</div><div class="ttdef"><b>Definition:</b> io.cpp:27</div></div>
+<div class="ttc" id="aio_8h_html_a418ebcf0b10234bd23d4046eb627e3b1"><div class="ttname"><a href="io_8h.html#a418ebcf0b10234bd23d4046eb627e3b1">getl</a></div><div class="ttdeci">int getl(char *buffer, const size_t size, FILE *stream)</div><div class="ttdoc">Gets a string from a stream.</div><div class="ttdef"><b>Definition:</b> io.cpp:16</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a3fdf43f13ad2edb09038cb10a51bce41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fdf43f13ad2edb09038cb10a51bce41">&#9670;&nbsp;</a></span>set_color()</h2>
+<a id="acbfad95aeb169e9e37a4c2d751e441e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbfad95aeb169e9e37a4c2d751e441e9">&#9670;&nbsp;</a></span>reset_color()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int set_color </td>
+          <td class="memname">int reset_color </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="io_8h.html#aedd64c3f92da850b93776c65fd1cced3">colors</a>&#160;</td>
-          <td class="paramname"><em>text</em> = <code>NOTHING</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="io_8h.html#aedd64c3f92da850b93776c65fd1cced3">colors</a>&#160;</td>
-          <td class="paramname"><em>background</em> = <code>NOTHING</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets console color. </p>
-<p>Function sets ASCII text and background console color</p>
+<p>Resets console color settings. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Function resets both background and text color settings</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Negative value in case of error </dd></dl>
+
+</div>
+</div>
+<a id="ac3611f17d3e0e690f4b5171e23bda3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3611f17d3e0e690f4b5171e23bda3cd">&#9670;&nbsp;</a></span>set_back_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_back_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="io_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a>&#160;</td>
+          <td class="paramname"><em>background</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets console background color. </p>
+<p>Function sets ASCII background console color</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td>Text color </td></tr>
     <tr><td class="paramname">background</td><td>Background color</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><ul>
-<li>Error: negative value.</li>
-<li>Success: positive value.</li>
-</ul>
-</dd></dl>
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>ASCII reset symbol is the same for text and background.<ul>
-<li>If you use set_color(RESET) both text and background will reset.</li>
-<li>Try to use set_color(NOTHING, RED) if you don't want to change text color. </li>
-</ul>
-</dd></dl>
-<div class="fragment"><div class="line"><a class="code" href="io_8h.html#a3fdf43f13ad2edb09038cb10a51bce41">set_color</a>(RED);           <span class="comment">// RED console text color</span></div>
-<div class="line"><a class="code" href="io_8h.html#a3fdf43f13ad2edb09038cb10a51bce41">set_color</a>(YELLOW, RESET); <span class="comment">// Default console text and background color</span></div>
-<div class="ttc" id="aio_8h_html_a3fdf43f13ad2edb09038cb10a51bce41"><div class="ttname"><a href="io_8h.html#a3fdf43f13ad2edb09038cb10a51bce41">set_color</a></div><div class="ttdeci">int set_color(colors text=NOTHING, colors background=NOTHING)</div><div class="ttdoc">Sets console color.</div><div class="ttdef"><b>Definition:</b> io.cpp:22</div></div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>Negative value in case of error </dd></dl>
+
+</div>
+</div>
+<a id="a401a773570b78f146a24a812b7e0e195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401a773570b78f146a24a812b7e0e195">&#9670;&nbsp;</a></span>set_text_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_text_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="io_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a>&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets console text color. </p>
+<p>Function sets ASCII text console color</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Text color</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The same as printf() function </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

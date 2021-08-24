@@ -1,27 +1,16 @@
 #include <assert.h>
 #include "../include/io.h"
 
-const char *text_color_codes[] = {
-    "",
-    "\u001b[0m",
-    "\u001b[31m",
-    "\u001b[32m",
-    "\u001b[33m",
-    "\u001b[34m",
-}; 
+int set_text_color(color text) {
+    return printf("\u001b[3%dm", text);
+}
 
-const char *background_color_codes[] = {
-    "",
-    "\u001b[0m",
-    "\u001b[41m",
-    "\u001b[42m",
-    "\u001b[43m",
-    "\u001b[44m",
-}; 
+int set_back_color(color background) {
+    return printf("\u001b[4%dm", background);
+}
 
-int set_color(colors text, colors background) {
-    return printf("%s%s", text_color_codes[text], 
-                          background_color_codes[background]);
+int reset_color() {
+    return printf("\u001b[0m");
 }
 
 int getl(char *buffer, const size_t size, FILE *stream) {
