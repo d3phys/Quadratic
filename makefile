@@ -10,7 +10,7 @@ check: out
 	valgrind ./$(TARGET)
 
 out: $(OBJ)
-	$(CC) -o $(TARGET) $(OBJ) -lm 
+	$(CC) $(OBJ) -lm -o $(TARGET) 
 
 bin: $(OBJ)
 	$(CC) -o3 -s $(OBJ) -lm -o $(TARGET)
