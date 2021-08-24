@@ -2,7 +2,6 @@
 #include "../include/client.h"
 #include "../include/compare.h"
 
-extern const double TOLERANCE;
 const int OUT_DIGITS = (int) -log10(TOLERANCE);
 
 void display_roots(const int n_roots, const square_solutions solutions) {

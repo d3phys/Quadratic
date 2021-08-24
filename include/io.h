@@ -6,6 +6,18 @@
 #define IO_H_
 #include <stdio.h>
 
+
+enum colors {
+    NOTHING = 0,
+    RESET,
+    RED,
+    GREEN,
+    YELLOW,
+    BLUE,
+};
+
+int set_color(colors text = NOTHING, colors background = NOTHING);
+
 /*!
  * \brief Gets a string from a stream.
  *
