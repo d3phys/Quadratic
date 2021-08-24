@@ -1,12 +1,17 @@
 /*!
  * \file
  * \brief Input/output include file.
+ * \author d3phys
+ * \date 24.08.2021
 */
 #ifndef IO_H_
 #define IO_H_
 #include <stdio.h>
 
 
+/*!
+ * \brief ASCII colors enum
+*/
 enum colors {
     NOTHING = 0,
     RESET,
@@ -16,6 +21,30 @@ enum colors {
     BLUE,
 };
 
+/*!
+ * \brief Sets console color
+ *
+ * Function sets ASCII text and background console color
+ *
+ * \param  text       Text color
+ * \param  background Background color
+ *
+ * \return 
+ * - Error:   negative value.
+ * - Success: positive value.
+ *
+ * \bug 
+ * ASCII reset symbol is the same for text and background. 
+ * - If you use set_color(RESET) both text and background will reset.
+ * - Try to use set_color(NOTHING, RED) if you don't want to change text color. 
+ *
+ * \code
+ *
+ * set_color(RED);           // RED console text color
+ * set_color(YELLOW, RESET); // Default console text and background color
+ *
+ * \endcode
+*/
 int set_color(colors text = NOTHING, colors background = NOTHING);
 
 /*!

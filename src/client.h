@@ -1,6 +1,8 @@
 /*!
  * \file
  * \brief Application client include file.
+ * \author d3phys
+ * \date 24.08.2021
 */
 #ifndef _CLIENT_H_
 #define _CLIENT_H_

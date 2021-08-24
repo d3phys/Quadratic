@@ -1,6 +1,8 @@
 /*!
  * \file
  * \brief Equation solver include file.
+ * \author d3phys
+ * \date 24.08.2021
 */
 #ifndef SOLVE_H_
 #define SOLVE_H_

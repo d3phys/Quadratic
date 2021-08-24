@@ -5,4 +5,4 @@
 *.out
 
 # Doxygen generated
-/docs/compiled
+# /docs/compiled

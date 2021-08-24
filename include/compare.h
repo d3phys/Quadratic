@@ -1,6 +1,8 @@
 /*!
  * \file
  * \brief Tolerant computations include file.
+ * \author d3phys
+ * \date 24.08.2021
 */
 #ifndef COMPARE_H_
 #define COMPARE_H_
