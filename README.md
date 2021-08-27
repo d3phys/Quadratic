@@ -33,6 +33,11 @@ Run  `<local_path_to_repo>/quadratic.out` and enjoy the process.
      <img src="images//preview.png" alt="Preview" width="416"/>
 </p>
 
+Usage example:
+<p align="center">
+     <img src="images//preview2" alt="Preview" width="416"/>
+</p>
+
 ## Docs
 If you want to use some modules or modify the whole program, you can check the documetation.
 >Check `<local_path_to_repo>/docs/compiled`

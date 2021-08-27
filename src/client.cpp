@@ -23,7 +23,7 @@ const char INITIAL_MSG[] = "╔═══╦╗─╔╦═══╦═══╦�
 
 const char INCORRECT_MSG[] = "Incorrect input. Try again. Run 'h' for help.\n";
 
-const char NUM_ERR_MSG[] = "Incorrect input. There should be always 3 numbers. Run 'h' for help.\n";
+const char NUM_ERR_MSG[] = "Incorrect input. There should always be 3 numbers. Run 'h' for help.\n";
 
 const char OVERFLOW_MSG[]  = "Buffer overflow. Try again. Run 'h' for help.\n";
 
