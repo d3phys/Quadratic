@@ -9,6 +9,7 @@ A minimalistic CLI Linux program which solves quadratic equations.
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Docs](#docs)
 
 ## Description
 This program can easily solve quadratic equations. It has an **eye-catching design** and **user-friendly interface**.
