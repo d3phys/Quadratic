@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['equal_36',['equal',['../compare_8h.html#ad0be8bd630b355acb893f34cd4698392',1,'compare.cpp']]]
+  ['reset_5fcolor_44',['reset_color',['../io_8h.html#acbfad95aeb169e9e37a4c2d751e441e9',1,'io.cpp']]]
 ];

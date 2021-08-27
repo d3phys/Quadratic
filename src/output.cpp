@@ -3,6 +3,7 @@
 #include <math.h>
 #include "../include/compare.h"
 
+
 const int OUT_DIGITS = (int) -log10(TOLERANCE);
 
 void display_roots(const roots_state rs, const square_solutions solutions) {

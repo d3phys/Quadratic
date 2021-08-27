@@ -22,7 +22,7 @@ This program can be installed in a few simple steps. You should have `git` , `ma
     * `make bin`
 
 ## Usage
-Run  `./quadratic.out` and enjoy the process.
+Run  `<local_path_to_repo>/quadratic.out` and enjoy the process.
 
 **"Quadratic"** works with a standard form quadratic equation:
 `ax²+bx+c=0`. Simply enter `a` `b` `c` coefficients.
@@ -31,3 +31,7 @@ Run  `./quadratic.out` and enjoy the process.
 <p align="center">
      <img src="images//preview.png" alt="Preview" width="416"/>
 </p>
+
+## Docs
+If you want to use some modules or modify the whole program, you can check the documetation.
+>Check `<local_path_to_repo>/docs/compiled`

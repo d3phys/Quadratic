@@ -1,14 +1,14 @@
 #include <math.h>
 #include "../include/compare.h"
 
-bool equal(const double value1, const double value2, const double tolerance) {
-    return fabs(value1 - value2) < tolerance;
+bool check_equal(const double equal1, const double equal2, const double tolerance) {
+    return fabs(equal1 - equal2) < tolerance;
 }
 
-bool over(const double value1, const double value2, const double tolerance) {
-    return (value1 - value2) > tolerance;
+bool check_greater(const double greater, const double lower, const double tolerance) {
+    return (greater - lower) > tolerance;
 }
 
-bool below(const double value1, const double value2, const double tolerance) {
-    return (value2 - value1) > tolerance;
+bool check_lower(const double lower, const double greater, const double tolerance) {
+    return (greater - lower) > tolerance;
 }

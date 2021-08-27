@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['input_5fbuffer_10',['INPUT_BUFFER',['../config_8h.html#ada1e760483f805acf0b327df79e2edac',1,'config.h']]],
-  ['io_2eh_11',['io.h',['../io_8h.html',1,'']]]
+  ['reset_5fcolor_15',['reset_color',['../io_8h.html#acbfad95aeb169e9e37a4c2d751e441e9',1,'io.cpp']]],
+  ['roots_5fstate_16',['roots_state',['../solve_8h.html#a97135e0e3762815095b2800d139f7a3c',1,'solve.h']]]
 ];

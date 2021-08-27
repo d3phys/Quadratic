@@ -41,19 +41,19 @@ void test_solve_quadratic() {
 
     TEST_SOLVE(0, 0, 93.112,  (n_roots == ZERO_RT));
 
-    TEST_SOLVE(0, 4.32, 2.93, (n_roots == ONE_RT && equal(solutions.x1, -0.678240740741)));
+    TEST_SOLVE(0, 4.32, 2.93, (n_roots == ONE_RT && check_equal(solutions.x1, -0.678240740741)));
 
-    TEST_SOLVE(2.5, 54, 3.50, (n_roots == TWO_RT && equal(solutions.x1, -0.065010479744) 
-                                                 && equal(solutions.x2, -21.534989520256)));
+    TEST_SOLVE(2.5, 54, 3.50, (n_roots == TWO_RT && check_equal(solutions.x1, -0.065010479744) 
+                                                 && check_equal(solutions.x2, -21.534989520256)));
 
-    TEST_SOLVE(2, 4, 2, (n_roots == ONE_RT && equal(solutions.x1, -1)));
+    TEST_SOLVE(2, 4, 2, (n_roots == ONE_RT && check_equal(solutions.x1, -1)));
 
     TEST_SOLVE(2, 4, 68.32, (n_roots == ZERO_RT))
 
     TEST_SOLVE(0, 0, 0, (n_roots == INF_RT))
 
-    TEST_SOLVE(TOLERANCE, -TOLERANCE, 0, (n_roots == TWO_RT && equal(solutions.x1, 0.0) 
-                                                            && equal(solutions.x2, 1.0  )));
+    TEST_SOLVE(TOLERANCE, -TOLERANCE, 0, (n_roots == TWO_RT && check_equal(solutions.x1, 0.0) 
+                                                            && check_equal(solutions.x2, 1.0  )));
 
     TEST_SOLVE(TOLERANCE / 10, -TOLERANCE / 10, 0, (n_roots == INF_RT));
 

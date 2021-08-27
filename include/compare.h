@@ -2,7 +2,7 @@
  * \file
  * \brief Tolerant computations include file.
  * \author d3phys
- * \date 24.08.2021
+ * \date 27.08.2021
 */
 #ifndef COMPARE_H_
 #define COMPARE_H_
@@ -13,54 +13,54 @@
 const double TOLERANCE = 1e-12;
 
 /*!
- * \brief Checks equality with tolerance.
+ * \brief Checks the guess about two double numbers.
  *
- * Compares two numbers. 
- *
- * \param value1    First operand
- * \param value2    Second operand
+ * \param equal2    Presumably equal number
+ * \param equal1    Presumably equal number
  * \param tolerance Tolerance
- * 
- * \return Does value1 equal to value2
+ *
+ * \return Returns true if equal1 is equal to equal2 
  *
  * \code
- * equal(12.2, 21.0, 0.11); // false
- * equal(12.2, 21.0, 10.0); // true
+ * check_equal(21.2, 21.0, 0.11); // false
+ * check_equal(22.2, 21.0, 2.0);  // true
  * \endcode
 */
-bool equal(const double value1, const double value2, const double tolerance = TOLERANCE);
+bool check_equal(const double equal1, const double equal2, const double tolerance = TOLERANCE);
 
 /*!
- * \brief Compares two numbers.
+ * \brief Checks the guess about two double numbers.
  *
- * \param value1    First operand
- * \param value2    Second operand
+ * \param greater   Presumably greater number
+ * \param lower     Presumably lower number
  * \param tolerance Tolerance
  *
- * \return Is value1 greater than value2
+ * \return Returns true if greater is greater than lower
  *
  * \code
- * over(21.2, 21.0, 0.11); // true
- * over(22.2, 21.0, 2.0);  // false, because they are equal
+ * check_greater(21.2, 21.0, 0.11); // true
+ * check_greater(22.2, 21.0, 2.0);  // false, because they are equal
  * \endcode
 */
-bool over (const double value1, const double value2, const double tolerance = TOLERANCE);
+bool check_greater(const double greater, const double lower, const double tolerance = TOLERANCE);
+
 
 /*!
- * \brief Compares two numbers.
+ * \brief Checks the guess about two double numbers.
  *
- * \param value1    First operand
- * \param value2    Second operand
+ * \param lower     Presumably lower number
+ * \param greater   Presumably greater number
  * \param tolerance Tolerance
  *
- * \return Is value1 lower than value2
+ * \return Returns true if lower is lower than greater
  *
  * \code
- * over(21.2, 21.0, 0.11); // false
- * over(22.2, 21.0, 2.0);  // false, because they are equal
+ * check_lower(21.2, 21.0, 0.11); // false
+ * check_lower(22.2, 21.0, 2.0);  // false, because they are equal
  * \endcode
 */
-bool below(const double value1, const double value2, const double tolerance = TOLERANCE);
+bool check_lower(const double lower, const double greater, const double tolerance = TOLERANCE);
+
 
 
 #endif // COMPARE_H_

@@ -19,10 +19,11 @@ const char INITIAL_MSG[] = "╔═══╦╗─╔╦═══╦═══╦�
                            "║╚═╝║╚═╝║╔═╗╠╝╚╝║║║╚╣╔═╗║─║║─╔╣╠╣╚═╝║\n"
                            "╚══╗╠═══╩╝─╚╩═══╩╝╚═╩╝─╚╝─╚╝─╚══╩═══╝\n"
                            "───╚╝A minimalistic equations solver \n"
-                           "                           by d3phys \n"
-                           "Enter 3 numbers (a b c):             \n";
+                           "                           by d3phys \n";
 
 const char INCORRECT_MSG[] = "Incorrect input. Try again. Run 'h' for help.\n";
+
+const char NUM_ERR_MSG[] = "Incorrect input. There should be always 3 numbers. Run 'h' for help.\n";
 
 const char OVERFLOW_MSG[]  = "Buffer overflow. Try again. Run 'h' for help.\n";
 
@@ -35,7 +36,7 @@ const char HELP_MSG[] = "------------------------------------------------------\
                         "Incorrect input error   - incorrect input.\n"
                         "------------------------------------------------------\n";
 
-const char INVITE_LINE[] = "[quadratic]> ";
+const char INVITE_LINE[] = "[quadratic] ";
 
 int client_square_eq() {
     square_params    params    = {0};
@@ -65,6 +66,8 @@ int client_square_eq() {
             } else if (n_valid == 3) {
                 roots_state rs = solve_quadratic(params, &solutions);
                 display_roots(rs, solutions);
+            } else if (n_valid == 2) {
+                COLOR_PRINT(NUM_ERR_MSG, RED);
             } else {
                 COLOR_PRINT(INCORRECT_MSG, RED);
             }

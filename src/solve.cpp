@@ -10,8 +10,8 @@ double calc_discr(const square_params coeffs) {
 roots_state solve_linear(const double b, const double c, double *solution) {
     assert(solution);
 
-    if (equal(b, 0)) {
-        if (equal(c, 0))
+    if (check_equal(b, 0)) {
+        if (check_equal(c, 0))
             return INF_RT;
         else 
             return ZERO_RT;
@@ -28,9 +28,9 @@ roots_state solve_linear(const double b, const double c, double *solution) {
 roots_state solve_quadratic(const square_params coeffs, square_solutions *solutions) {
     assert(solutions);
 
-    if (equal(coeffs.a, 0)) {
+    if (check_equal(coeffs.a, 0)) {
         return solve_linear(coeffs.b, coeffs.c, &(solutions->x1));
-    } else if (equal(coeffs.c, 0)) {
+    } else if (check_equal(coeffs.c, 0)) {
         solutions->x1 = 0;
        
         if (solve_linear(coeffs.a, coeffs.b, &solutions->x2) == ERR_INF)
@@ -40,14 +40,14 @@ roots_state solve_quadratic(const square_params coeffs, square_solutions *soluti
     } else {
         double sqrt_discr= sqrt(calc_discr(coeffs));
 
-        if (equal(sqrt_discr, 0)) {
+        if (check_equal(sqrt_discr, 0)) {
             solutions->x1 = (-coeffs.b) / (2.0 * coeffs.a);
 
             if (!isfinite(solutions->x1)) 
                 return ERR_INF;
 
             return ONE_RT;
-        } else if (over(sqrt_discr, 0)) {
+        } else if (check_greater(sqrt_discr, 0)) {
             solutions->x1 = (-coeffs.b + sqrt_discr) / (2.0 * coeffs.a);
             solutions->x2 = (-coeffs.b - sqrt_discr) / (2.0 * coeffs.a);
 

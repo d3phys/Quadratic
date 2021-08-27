@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['display_5froots_35',['display_roots',['../client_8h.html#ace90c00166a28d14b6a70ff2d8217dfa',1,'output.cpp']]]
+  ['getl_43',['getl',['../io_8h.html#a418ebcf0b10234bd23d4046eb627e3b1',1,'io.cpp']]]
 ];

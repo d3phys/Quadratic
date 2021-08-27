@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['input_5fbuffer_45',['INPUT_BUFFER',['../config_8h.html#ada1e760483f805acf0b327df79e2edac',1,'config.h']]]
+  ['input_5fbuffer_5fsize_50',['INPUT_BUFFER_SIZE',['../config_8h.html#ae5744ec5ab2c97228eb8f0c4e032338d',1,'config.h']]]
 ];
