@@ -30,7 +30,7 @@ Run  `<local_path_to_repo>/quadratic.out` and enjoy the process.
 
 >You can enter `0` instead of `a` to solve a linear equation.
 <p align="center">
-     <img src="images//preview.png" alt="Preview" width="416"/>
+     <img src="images//preview" alt="Preview" width="416"/>
 </p>
 
 Usage example:
